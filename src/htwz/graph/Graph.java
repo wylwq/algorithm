@@ -40,8 +40,8 @@ public class Graph {
 
         graph.showGraph();
 
-        /*System.out.println("深度遍历");
-        graph.dfs();*/
+        System.out.println("深度遍历");
+        //graph.dfs();
 
         System.out.println("广度遍历");
         graph.bfs();
