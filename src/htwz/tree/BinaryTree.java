@@ -21,7 +21,7 @@ public class BinaryTree {
 
         tree.setRoot(node1);
 
-        /*System.out.println("前序遍历");
+        System.out.println("前序遍历");
         tree.preOrder();
         System.out.println("中序遍历");
         tree.infixOrder();
@@ -33,7 +33,7 @@ public class BinaryTree {
         System.out.println("中序查找元素");
         tree.infixOrderSearch(3);
         System.out.println("后序查找元素");
-        tree.suffixOrderSearch(3);*/
+        tree.suffixOrderSearch(3);
 
 
     }

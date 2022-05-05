@@ -41,10 +41,10 @@ public class Graph {
         graph.showGraph();
 
         System.out.println("深度遍历");
-        //graph.dfs();
+        graph.dfs();
 
         System.out.println("广度遍历");
-        graph.bfs();
+        //graph.bfs();
 
     }
 
@@ -113,7 +113,7 @@ public class Graph {
             u = (Integer) queue.removeFirst();
             w = getFirstNeighbor(u);
             while (w != -1) {
-                if (isVisited[w]) {
+                if (!isVisited[w]) {
                     System.out.println(getValueByIndex(w) + "=>");
                     isVisited[w] = true;
                     queue.addLast(w);
@@ -127,7 +127,7 @@ public class Graph {
 
     public void bfs() {
         for (int i = 0 ; i < getNumOfEdges() ; i++) {
-            if (isVisited[i]) {
+            if (!isVisited[i]) {
                 bfs(isVisited, i);
             }
         }
