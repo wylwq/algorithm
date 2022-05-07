@@ -1,4 +1,4 @@
-package htwz.leetcode;
+package htwz.leetcode.str;
 
 /**
  * 最长回文子串

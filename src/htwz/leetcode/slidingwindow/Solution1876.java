@@ -1,4 +1,4 @@
-package htwz.leetcode;
+package htwz.leetcode.slidingwindow;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package htwz.leetcode;
+package htwz.leetcode.slidingwindow;
 
 /**
  * 所有元音按顺序排布的最长子字符串---滑动窗口

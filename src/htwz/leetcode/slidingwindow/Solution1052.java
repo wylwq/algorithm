@@ -1,4 +1,4 @@
-package htwz.leetcode;
+package htwz.leetcode.slidingwindow;
 
 /**
  * 滑动窗口---爱生气的书店老板
