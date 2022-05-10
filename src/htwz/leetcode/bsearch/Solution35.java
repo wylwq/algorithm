@@ -12,7 +12,7 @@ public class Solution35 {
 
     public static void main(String[] args) {
         int[] nums = {1,3,5,6};
-        int target = 7;
+        int target = 2;
         //int insert = searchInsert(nums, target);
         int insert = bSearch(nums, target);
         System.out.println(insert);
