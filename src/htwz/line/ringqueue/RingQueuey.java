@@ -40,8 +40,8 @@ public class RingQueuey<T> {
     }
 
     public RingQueuey(Integer maxSize) {
-        this.maxSize = maxSize;
-        ringArray = new Object[maxSize];
+        this.maxSize = maxSize + 1;
+        ringArray = new Object[this.maxSize];
         front = 0;
         rear = 0;
     }
