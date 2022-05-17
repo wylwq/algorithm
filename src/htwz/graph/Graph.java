@@ -44,7 +44,7 @@ public class Graph {
         graph.dfs();
 
         System.out.println("广度遍历");
-        //graph.bfs();
+        graph.bfs();
 
     }
 
