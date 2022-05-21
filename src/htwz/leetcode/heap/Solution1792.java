@@ -20,10 +20,12 @@ import java.util.PriorityQueue;
 public class Solution1792 {
 
     public static void main(String[] args) {
-
+        int[][] classes = {{1,2}, {3,5}, {2,2}};
+        int extraStudents = 2;
+        System.out.println(maxAverageRatio(classes, extraStudents));
     }
 
-    public double maxAverageRatio(int[][] classes, int extraStudents) {
+    public static double maxAverageRatio(int[][] classes, int extraStudents) {
         int n = classes.length;
         // 定义优先队列，优先级按照增加 1 名学生之后能够产生的最大贡献来排序
         PriorityQueue<double[]> queue = new PriorityQueue<double[]>((o1, o2) -> {
