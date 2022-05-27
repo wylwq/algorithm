@@ -30,7 +30,9 @@ public class Solution211 {
         Node p = root;
         for (int i = 0; i < s.length(); i++) {
             int u = s.charAt(i) - 'a';
-            if (p.tridNode[u] == null) p.tridNode[u] = new Node();
+            if (p.tridNode[u] == null) {
+                p.tridNode[u] = new Node();
+            }
             p = p.tridNode[u];
         }
         p.isWord = true;
