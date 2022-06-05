@@ -19,6 +19,7 @@ import java.util.Arrays;
 public class Solution475 {
 
     public static int findRadius(int[] houses, int[] heaters) {
+        System.out.println("无用的提交");
         int ans = 0;
         Arrays.sort(heaters);
         for (int house : houses) {
