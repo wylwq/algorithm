@@ -44,6 +44,5 @@ public class Solution981 {
     public static String get(String key, int timestamp) {
         Map.Entry<Integer, String> entry = TIME_MAP.getOrDefault(key, new TreeMap<>()).floorEntry(timestamp);
         return entry == null ? "" : entry.getValue();
-
     }
 }
