@@ -59,4 +59,88 @@ public class Solution1715 {
     return false;
   }
 
+
+  /**
+   * 字典树
+   */
+  public static String longestWordV2(String[] words) {
+    Node root = new Node();
+    for (String word : words) {
+      root.add(word);
+    }
+    Arrays.sort(words, (a, b) -> {
+      if (a.length() == b.length()) {
+        return a.compareTo(b);
+      }
+      return b.length() - a.length();
+    });
+    for (String word : words) {
+      char[] cs = word.toCharArray();
+      if (curV2(cs, 0, root, 0) > 1) {
+        return word;
+      }
+    }
+    return "";
+  }
+
+  private static int curV2(char[] cs, int index, Node root, int size) {
+    if (cs.length == index) {
+      return size;
+    }
+    for (int i = 0; i < cs.length; i++) {
+      Node node = root.node[cs[i]];
+      if (node == null) {
+        return 0;
+      }
+      if (node.end) {
+        int ans = curV2(cs, i, root, size + 1);
+        if (ans != 0) {
+          return ans;
+        }
+      }
+    }
+    return 0;
+  }
+
+
+}
+
+class Node {
+  Node[] node;
+
+  boolean end = false;
+
+  public Node() {
+    node = new Node[26];
+    end = false;
+  }
+
+  public Node[] getNode() {
+    return node;
+  }
+
+  public void setNode(Node[] node) {
+    this.node = node;
+  }
+
+  public boolean isEnd() {
+    return end;
+  }
+
+  public void setEnd(boolean end) {
+    this.end = end;
+  }
+
+  public void add(String word) {
+    Node node = this;
+    char[] chars = word.toCharArray();
+    for (char c : chars) {
+      int index = c - 'a';
+      if (node.node[index] == null) {
+        node.node[index] = new Node();
+      }
+      node = node.node[index];
+    }
+    node.end = true;
+  }
 }
