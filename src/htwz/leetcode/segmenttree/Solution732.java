@@ -1,4 +1,4 @@
-package htwz.leetcode.unionfind;
+package htwz.leetcode.segmenttree;
 
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -22,7 +22,13 @@ import java.util.TreeMap;
 public class Solution732 {
 
   public static void main(String[] args) {
-
+    Solution732 book = new Solution732();
+    book.book(10, 20); // 返回 1 ，第一个日程安排可以预订并且不存在相交，所以最大 k 次预订是 1 次预订。
+    book.book(50, 60); // 返回 1 ，第二个日程安排可以预订并且不存在相交，所以最大 k 次预订是 1 次预订。
+    book.book(10, 40); // 返回 2 ，第三个日程安排 [10, 40) 与第一个日程安排相交，所以最大 k 次预订是 2 次预订。
+    book.book(5, 15); // 返回 3 ，剩下的日程安排的最大 k 次预订是 3 次预订。
+    book.book(5, 10); // 返回 3
+    book.book(25, 55); // 返回 3
   }
 
   private TreeMap<Integer, Integer> cnt;
