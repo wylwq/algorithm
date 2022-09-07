@@ -39,6 +39,12 @@ public class Solution914 {
     return g >= 2;
   }
 
+  /**
+   * 求最大公约数
+   * @param x
+   * @param y
+   * @return
+   */
   public static int gcd(int x, int y) {
     if (x == 0) {
       return y;
