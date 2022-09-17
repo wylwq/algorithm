@@ -12,7 +12,7 @@ import htwz.leetcode.bfs.TreeNode;
  * @author wangyu
  * @since 2022/9/17 23:42
  */
-public class Solution {
+public class Solution100 {
 
   public static void main(String[] args) {
 
